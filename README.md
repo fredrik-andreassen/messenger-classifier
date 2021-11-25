@@ -2,6 +2,34 @@
 
 ## Klassifiserer
 ### Avhengigheter
+##### Norsk data
+For optimal utfilterering av systemgenererte meldinger, må Messenger-språket ditt være norsk. Andre språk gjenkjennes ikke av de regulære uttrykkene som filtrerer ut slike meldinger.
+
+Eksempelutdrag fra rå samtaledata med norsk språk:
+```json
+    {
+      "sender_name": "person6",
+      "timestamp_ms": 1626285208702,
+      "content": "Videochatten er avsluttet.",
+      "call_duration": 47,
+      "type": "Call",
+      "is_unsent": false
+    },
+    {
+      "sender_name": "person3",
+      "timestamp_ms": 1626285173388,
+      "content": "person3 ble med i videochatten.",
+      "type": "Generic",
+      "is_unsent": false
+    },
+    {
+      "sender_name": "person4",
+      "timestamp_ms": 1626285164904,
+      "content": "Du ble med i videochatten.",
+      "type": "Generic",
+      "is_unsent": false
+    }
+```
 ##### NLTK
 `pip install nltk`
 ##### NLTK-data
