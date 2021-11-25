@@ -30,24 +30,52 @@ def main():
 
 
 
-    print(' BAG OF WORDS')
+    # print('1) BAG OF WORDS')
+    # features = []
+    # for message in messages:
+    #     features.append((message_features_bow1(message[2]), abreviate_name(message[0])))
+    # train_and_evaluate(features)
+    #
+    #
+    # print('2) BAG OF WORDS, INGEN TEGNSETTING')
+    # features = []
+    # for message in messages:
+    #     features.append((message_features_bow2(message[2]), abreviate_name(message[0])))
+    # train_and_evaluate(features)
+    #
+    #
+    # print('3) BAG OF WORDS, INGEN TEGNSETTING, INGEN NORSKE STOPPORD')
+    # features = []
+    # for message in messages:
+    #     features.append((message_features_bow3(message[2]), abreviate_name(message[0])))
+    # train_and_evaluate(features)
+
+
+    # print('4) BAG OF WORDS (SMÅ BOKSTAVER), INGEN TEGNSETTING, INGEN NORSKE STOPPORD')
+    # features = []
+    # for message in messages:
+    #     features.append((message_features_bow4(message[2]), abreviate_name(message[0])))
+    # train_and_evaluate(features)
+
+
+    print('5) BAG OF WORDS (SMÅ BOKSTAVER), INGEN TEGNSETTING, INGEN NORSKE STOPPORD + BIGRAM ')
     features = []
     for message in messages:
-        features.append((message_features_bow1(message[2]), abreviate_name(message[0])))
+        features.append((message_features_bow5(message[2]), abreviate_name(message[0])))
     train_and_evaluate(features)
 
 
-    print(' BAG OF WORDS, INGEN TEGNSETTING')
+    print('6) BIGRAM')
     features = []
     for message in messages:
-        features.append((message_features_bow2(message[2]), abreviate_name(message[0])))
+        features.append((message_features_bow6(message[2]), abreviate_name(message[0])))
     train_and_evaluate(features)
 
 
-    print(' BAG OF WORDS, INGEN TEGNSETTING, INGEN NORSKE STOPPORD')
+    print('7) BIGRAM (SMÅ BOKSTAVER)')
     features = []
     for message in messages:
-        features.append((message_features_bow3(message[2]), abreviate_name(message[0])))
+        features.append((message_features_bow6(message[2]), abreviate_name(message[0])))
     train_and_evaluate(features)
 
 if __name__ == '__main__':
