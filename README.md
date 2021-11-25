@@ -19,4 +19,9 @@ Flytt mappen `inbox` som ligger i kopien du lastet ned, inn i rotmappen til dett
 
 #### Hvordan kjøre
 `python classifier.py`
+
 Hver mappe i `inbox`representerer en samtale i Messenger. Kopier mappenavnet til ønsket samtale og lim inn i programmet ved forspørsel.
+
+Trekkgenerering kan ta litt tid avhengig av samtalens lengde.
+
+![Programgrensesnitt](readme_pictures/program_interface.png)
