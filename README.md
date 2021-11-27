@@ -34,7 +34,10 @@ Eksempelutdrag fra rå samtaledata med norsk språk:
 `pip install nltk`
 
 ##### NLTK-data
-Manglende datapakker vises ved kjøring.
+```python
+import nltk
+nltk.download('punkt')
+```
 [Offisiell veilednig](https://www.nltk.org/data.html)
 
 
