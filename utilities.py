@@ -175,3 +175,11 @@ def split_data(data, test_ratio = 0.25):
 
 def abreviate_name(name):
     return name[:4] + ' ' + name.split()[-1][0]
+
+def get_module_methods(module_name):
+    methods = []
+    with open(f'{module_name}.py') as module:
+        for line in module:
+            if line.startswith('def '):
+                method_name = re.findall(r'[a-zA-Z0-9_]+')
+                
