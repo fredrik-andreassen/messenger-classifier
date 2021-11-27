@@ -31,9 +31,11 @@ Eksempelutdrag fra rå samtaledata med norsk språk:
     }
 ```
 ##### NLTK
+Meldinger tokeniseres med NLTK.
 `pip install nltk`
 
 ##### NLTK-data
+Pakke nødvendig for tokenisering kan lastes ned via Python-interpreten.
 ```python
 import nltk
 nltk.download('punkt')
