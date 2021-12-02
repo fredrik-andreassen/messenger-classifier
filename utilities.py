@@ -149,7 +149,7 @@ def show_message_distribution(messages):
 
     total_message_counts = sum(message_counts.values())
     longest_name = max(message_counts.keys(), key = len)
-    print(f' MESSAGE DISTRIBUTION ({len(message_counts.keys())} participants)')
+    print(f'MESSAGE DISTRIBUTION ({len(message_counts.keys())} participants)')
     for name, count in message_counts.items():
         percentage_text = str(round(count / total_message_counts * 100, 3))
         if len(percentage_text) == 5:
@@ -175,11 +175,3 @@ def split_data(data, test_ratio = 0.25):
 
 def abreviate_name(name):
     return name[:4] + ' ' + name.split()[-1][0]
-
-def get_module_methods(module_name):
-    methods = []
-    with open(f'{module_name}.py') as module:
-        for line in module:
-            if line.startswith('def '):
-                method_name = re.findall(r'[a-zA-Z0-9_]+')
-                

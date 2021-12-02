@@ -1,4 +1,6 @@
 import os
+from utilities import *
+from feature_extractors import *
 
 def get_conversation_name():
     conversation_name = None
@@ -26,13 +28,20 @@ def get_conversation_name():
 
     return conversation_name
 
-def get_feature_extractor():
-    
+def generate_features(messages):
+    return [(message_features_bow3(message[2]), message[0]) for message in messages]
+
 
 def main():
-    get_conversation_name()
-    get_feature_extractor()
+    conversation_name = get_conversation_name()
+    print('Leser inn meldinger...')
+    messages = get_messages(conversation_name)
+    print('Fjerner sjeldne deltakere...')
+    messages = remove_rare_participants(messages)
+    print('Fjerner systemgenererte meldinger...\n')
+    messages = clean_messages(messages)
 
+    show_message_distribution(messages)
 
 
 if __name__ == '__main__':
