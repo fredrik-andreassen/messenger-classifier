@@ -142,6 +142,22 @@ def clean_messages(messages):
     return filtered_messages
 
 
+# def show_message_distribution(messages):
+#     message_counts = defaultdict(lambda: 0)
+#     for message in messages:
+#         message_counts[message[0]] += 1
+#
+#     total_message_counts = sum(message_counts.values())
+#     longest_name = max(message_counts.keys(), key = len)
+#     print(f'MESSAGE DISTRIBUTION ({len(message_counts.keys())} participants)')
+#     for name, count in message_counts.items():
+#         percentage_text = str(round(count / total_message_counts * 100, 3))
+#         if len(percentage_text) == 5:
+#             print((' ' * (len(longest_name) - len(name))) + name + ':    ' + percentage_text + ' %   (' + str(count) + ')')
+#         else:
+#             print((' ' * (len(longest_name) - len(name))) + name + ':   ' + percentage_text + ' %   (' + str(count) + ')')
+#     print()
+
 def show_message_distribution(messages):
     message_counts = defaultdict(lambda: 0)
     for message in messages:
@@ -149,14 +165,17 @@ def show_message_distribution(messages):
 
     total_message_counts = sum(message_counts.values())
     longest_name = max(message_counts.keys(), key = len)
-    print(f'MESSAGE DISTRIBUTION ({len(message_counts.keys())} participants)')
+
+    print(f'MELDINGSFORDELING ({len(message_counts.keys())} deltakere)')
+
     for name, count in message_counts.items():
         percentage_text = str(round(count / total_message_counts * 100, 3))
-        if len(percentage_text) == 5:
-            print((' ' * (len(longest_name) - len(name))) + name + ':    ' + percentage_text + ' %   (' + str(count) + ')')
-        else:
-            print((' ' * (len(longest_name) - len(name))) + name + ':   ' + percentage_text + ' %   (' + str(count) + ')')
+        len_before_comma = len(percentage_text.split('.')[0])
+        len_after_comma = len(percentage_text.split('.')[1])
+
+        print(' ' * (len(longest_name) - len(name)) + name + ':   ' + ' ' * (3 - len_before_comma) + percentage_text + ' %    ' + ' ' * (4 - len_after_comma) + '(' + str(count) + ')')
     print()
+
 
 def split_data(data, test_ratio = 0.25):
     '''Splits data into `train_set` and `test_set`
@@ -175,3 +194,7 @@ def split_data(data, test_ratio = 0.25):
 
 def abreviate_name(name):
     return name[:4] + ' ' + name.split()[-1][0]
+
+def clear_screen():
+    print('\n' * 5)
+    os.system('cls' if os.name == 'nt' else 'clear')
