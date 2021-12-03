@@ -97,7 +97,7 @@ Input: _
 ```
 ##### Kommandoer
 Ved å starte input på skråstrek (/) tolkes input som en kommando.
-`/exit`: Avslutter
-`/reset`: Starter på nytt
-`/clear`: Tømmer terminalen med `clear`/`cls`
-`/dist`: Viser meldingsfordeling for valgt samtale
+* `/exit`: Avslutter
+* `/reset`: Starter på nytt
+* `/clear`: Tømmer terminalen med `clear`/`cls`
+* `/dist`: Viser meldingsfordeling for valgt samtale
