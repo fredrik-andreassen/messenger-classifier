@@ -66,7 +66,7 @@ Conversation: samtalenavn_xxxxx
 Loading messages...
 Cleaning messages...
 
- MESSAGE DISTRIBUTION (11 participants)
+MESSAGE DISTRIBUTION (11 participants)
  person1:   22.654 %   (23984)
  person2:   14.745 %   (15611)
  person3:    7.044 %   (7457)
@@ -83,15 +83,21 @@ Generating features...
 Training classifier...
 
 Ready!
-Exit with input 'q'.
+Exit with input '/q'.
 
-Input: hei på deg! hvordan har du det?
+>>> hei på deg! hvordan har du det?
 Features: contains(hei): True
 Predicted class: person1
 
-Input: Hva skal dere i helgen, gutter?
+>>> Hva skal dere i helgen, gutter?
 Features: contains(gutter): True,  contains(helgen): True
 Predicted class: person2
 
 Input: _
 ```
+##### Kommandoer
+Ved å starte input på skråstrek (/) tolkes input som en kommando.
+`/exit`: Avslutter
+`/reset`: Starter på nytt
+`/clear`: Tømmer terminalen med `clear`/`cls`
+`/dist`: Viser meldingsfordeling for valgt samtale
