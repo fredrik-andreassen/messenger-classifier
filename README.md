@@ -2,7 +2,7 @@
 
 
 ## Avhengigheter
-##### Norsk data
+#### Norsk data
 For optimal utfilterering av systemgenererte meldinger, må Messenger-språket ditt være norsk. Andre språk gjenkjennes ikke av de regulære uttrykkene som filtrerer ut slike meldinger.
 
 Eksempelutdrag fra rå samtaledata med norsk språk:
@@ -30,11 +30,11 @@ Eksempelutdrag fra rå samtaledata med norsk språk:
       "is_unsent": false
     }
 ```
-##### NLTK
+#### NLTK
 Meldinger tokeniseres med NLTK.
 `pip install nltk`
 
-##### NLTK-data
+#### NLTK-data
 Pakke nødvendig for tokenisering kan lastes ned via Python-interpreten.
 ```python
 import nltk
@@ -44,14 +44,14 @@ nltk.download('punkt')
 
 
 ## Hvordan legge til Messenger-data
-##### Last ned din Facebook-informasjon
+#### Last ned din Facebook-informasjon
 `Innstillinger og personvern > Innstillinger > Din Facebook-infomrasjon > Last ned informasjonen din`
 
 ![Skjermdump fra Facebook](readme_pictures/skjermdump-facebook.png)
 
 Velg datoperiode "Siden starten" for å sikre mest mulig data, mediekvalitet "Lav", format "JSON" og "Opprett fil".
 Datapakken kan lastes ned under fanen "Tilgjengelige kopier" når den er klar. Noen ganger kan dataen opprettes i to filer.
-##### Flytt meldingsdata inn i prosjektet
+#### Flytt meldingsdata inn i prosjektet
 Flytt mappen `inbox` som ligger i kopien du lastet ned, inn i rotmappen til dette prosjektet.
 
 ## Hvordan kjøre
@@ -95,7 +95,7 @@ Predicted class: person2
 
 Input: _
 ```
-##### Kommandoer
+#### Kommandoer
 Ved å starte input på skråstrek (/) tolkes input som en kommando.
 * `/exit`: Avslutter
 * `/reset`: Starter på nytt
