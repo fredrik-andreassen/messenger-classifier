@@ -1,3 +1,6 @@
+# Fredrik Aas Andreassen
+# fredaan@ifi.uio.no
+
 import os, json, re
 from collections import defaultdict
 

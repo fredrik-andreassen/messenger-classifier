@@ -1,3 +1,6 @@
+# Fredrik Aas Andreassen
+# fredaan@ifi.uio.no
+
 import string
 import nltk
 from nltk.corpus import stopwords
